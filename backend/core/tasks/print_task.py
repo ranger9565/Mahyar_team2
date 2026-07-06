@@ -1,3 +1,3 @@
 def run(task: dict):
-    return task.get("value", "")
+    return task.get("content", "")
 

@@ -13,7 +13,7 @@ class TaskEngine:
         self.tasks = []
 
     def load_tasks(self, plan: dict):
-        self.tasks = plan.get("tasks", [])
+        self.tasks = plan if isinstance(plan, list) else plan.get("tasks", [])
 
     def run(self):
         results = []

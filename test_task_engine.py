@@ -1,12 +1,12 @@
 from backend.core.task_engine import TaskEngine
-from backend.core.planner import PlannerAgent
+from backend.core.planner import Planner
 
-planner = PlannerAgent()
+planner = Planner()
 engine = TaskEngine()
 
 user_input = "hello and sum"
 
-plan = planner.create_plan(user_input)
+plan = planner.decompose(user_input)
 
 print("PLAN:")
 print(plan)
